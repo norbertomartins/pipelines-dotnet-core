@@ -6,7 +6,7 @@
 strategy:
   matrix:
     #PLATFORM: [ "x86", "x64" ]
-    buildConfiguration: [ "Debug", "Release" ]
+    buildConfiguration: 'Debug,Release'
 
 trigger:
 - master
