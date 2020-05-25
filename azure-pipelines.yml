@@ -8,9 +8,13 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-latest'
+  strategy:
+  cross-product:
+    #PLATFORM: [ "x86", "x64" ]
+    buildConfiguration: [ "Debug", "Release" ]
 
-variables:
-  buildConfiguration: 'Debug,Release'
+#variables:
+#  buildConfiguration: 'Debug,Release'
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
